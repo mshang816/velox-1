@@ -17,10 +17,12 @@
 #include "velox/connectors/hive/HiveConnector.h"
 #include "velox/exec/Operator.h"
 #include "velox/exec/tests/OperatorTestBase.h"
-#include "velox/exec/tests/TempFilePath.h"
+#include "velox/common/tests/util/TempFilePath.h"
 #include "velox/type/tests/SubfieldFiltersBuilder.h"
 
 #include <folly/executors/IOThreadPoolExecutor.h>
+
+using namespace facebook::velox::common::test;
 
 namespace facebook::velox::exec::test {
 

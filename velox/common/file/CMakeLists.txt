@@ -20,5 +20,5 @@ target_link_libraries(velox_file velox_exception ${FOLLY_WITH_DEPENDENCIES}
 
 add_executable(velox_file_test FileTest.cpp)
 add_test(velox_file_test velox_file_test)
-target_link_libraries(velox_file_test velox_file velox_exec_test_lib
+target_link_libraries(velox_file_test velox_file velox_common_test_util
                       ${GTEST_BOTH_LIBRARIES})

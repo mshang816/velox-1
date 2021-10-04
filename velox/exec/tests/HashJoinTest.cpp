@@ -254,11 +254,11 @@ TEST_F(HashJoinTest, lazyVectors) {
   auto rightVectors = makeRowVector(
       {makeFlatVector<int32_t>(1'000, [](auto row) { return row % 31; })});
 
-  auto leftFile = TempFilePath::create();
+  auto leftFile = ::common::test::TempFilePath::create();
   writeToFile(leftFile->path, kWriter, leftVectors);
   createDuckDbTable("t", {leftVectors});
 
-  auto rightFile = TempFilePath::create();
+  auto rightFile = ::common::test::TempFilePath::create();
   writeToFile(rightFile->path, kWriter, rightVectors);
   createDuckDbTable("u", {rightVectors});
 

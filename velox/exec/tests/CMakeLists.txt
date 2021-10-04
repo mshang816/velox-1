@@ -16,12 +16,13 @@ add_subdirectory(utils)
 add_library(
   velox_exec_test_lib
   PlanBuilder.cpp QueryAssertions.cpp Cursor.cpp OperatorTestBase.cpp
-  HiveConnectorTestBase.cpp TempFilePath.cpp)
+  HiveConnectorTestBase.cpp)
 
 target_link_libraries(
   velox_exec_test_lib
   velox_core
   duckdb
+  velox_common_test_util
   velox_parse_parser
   velox_vector_test_lib
   velox_duckdb_conversion
