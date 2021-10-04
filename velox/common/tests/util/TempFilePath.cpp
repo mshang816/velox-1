@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-#include "velox/exec/tests/TempFilePath.h"
+#include "velox/common/tests/util/TempFilePath.h"
 
-namespace facebook::velox::exec::test {
+namespace facebook::velox::common::test {
 
 std::shared_ptr<TempFilePath> TempFilePath::create() {
   struct SharedTempFilePath : public TempFilePath {

@@ -22,7 +22,7 @@
 
 #include "velox/common/base/Exceptions.h"
 
-namespace facebook::velox::exec::test {
+namespace facebook::velox::common::test {
 
 // It manages the lifetime of a temporary file.
 class TempFilePath {
